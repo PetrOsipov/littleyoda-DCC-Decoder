@@ -13,6 +13,8 @@
 #include <WiFiClient.h>
 #include <WiFiUdp.h>
 
+
+
 class CmdReceiverZ21Wlan: public CmdSenderBase, public z21PaketParser {
 public:
 	CmdReceiverZ21Wlan(Controller* c, String ip);
@@ -22,7 +24,7 @@ public:
 	void requestLocoInfo(int addr);
 	void enableBroadcasts();
 	virtual void sendSetTurnout(String id, String status);
-
+  virtual void sendSetSensor(uint16_t id, uint8_t status);
 private:
 	WiFiUDP* udp;
 	unsigned int localPort = 21105;
