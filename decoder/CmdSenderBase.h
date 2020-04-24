@@ -25,3 +25,4 @@ protected:
 };
 
 #endif /* CMDSENDERBASE_H_ */
+

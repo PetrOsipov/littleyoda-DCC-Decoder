@@ -29,3 +29,4 @@ private:
 };
 
 #endif /* INAMED_H_ */
+

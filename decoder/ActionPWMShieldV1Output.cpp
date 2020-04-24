@@ -20,7 +20,7 @@ ActionPWMSchieldV1Output::ActionPWMSchieldV1Output(uint8_t _i2caddr, uint8_t _mo
 	motoraddr = _motoraddr;
 	i2caddr = _i2caddr;
 	if (motoraddr < 0 || motoraddr > 1) {
-		Logger::getInstance()->printf(LogLevel::ERROR, "Motoraddresse ungültig: %d", _motoraddr);
+		Logger::getInstance()->printf(LogLevel::ERROR, "Motoraddresse ungÃ¼ltig: %d", _motoraddr);
 	}
 }
 
@@ -84,3 +84,4 @@ void ActionPWMSchieldV1Output::setSpeed(long l) {
 	Wire.write((byte)_pwm_val);
 	Wire.endTransmission();     // stop transmitting
 }
+

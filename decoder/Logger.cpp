@@ -209,3 +209,4 @@ void Logger::changeLogLevel(int diff) {
 	log(LogLevel::ERROR, "Loglevel: " + out);
 	#endif
 }
+

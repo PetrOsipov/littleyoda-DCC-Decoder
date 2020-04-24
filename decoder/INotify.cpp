@@ -51,3 +51,4 @@ boolean INotify::requestListContains(LinkedList<requestInfo*>* list, requestInfo
 	}
 	return false;
 }
+

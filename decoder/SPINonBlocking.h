@@ -83,3 +83,4 @@ extern SPINonClockingClass mySPI;
 #endif
 
 #endif /* SPINONBLOCKING_H_ */
+

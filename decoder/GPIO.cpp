@@ -255,3 +255,4 @@ int GPIOClass::loop() {
 	cache(false);
 	return 30;
 }
+

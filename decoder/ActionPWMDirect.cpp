@@ -106,3 +106,4 @@ void ActionPWMDirect::handleSpeedandDirectionWithoutPWMPin(int dir, int speed) {
 		direction = 0;
 	}
 }
+

@@ -57,3 +57,4 @@ void ActionTraktion::getRequestList(LinkedList<requestInfo*>* list) {
 	}
 
 }
+

@@ -45,9 +45,9 @@ private:
 	static const unsigned char DCC_FRAME_CV =0x16;
 
 	unsigned DCC_ADRESSE;
-	bool FORCE_LONG_ADDR = false;// Erzwingt Lange DCC Adresse. Adresen über 128 werden automatisch als lange Adressen angenommen
+	bool FORCE_LONG_ADDR = false;// Erzwingt Lange DCC Adresse. Adresen Ã¼ber 128 werden automatisch als lange Adressen angenommen
 	unsigned SPEEDSTEP = 2;// 0: 14 Fahrstufen, 1: 28 Fahrstufen 2: 128 Fahrstufen. Betrifft nur die Ansteuerung des Dekoders.
-							// Nur 128 Fahrstufen werden unterstützt!
+							// Nur 128 Fahrstufen werden unterstÃ¼tzt!
 	uint16_t LOCO_ADR;
 
 	unsigned char DCCBuf[6];
@@ -75,3 +75,4 @@ private:
 #endif
 
 #endif /* ACTIONDCCGENERATION_H_ */
+

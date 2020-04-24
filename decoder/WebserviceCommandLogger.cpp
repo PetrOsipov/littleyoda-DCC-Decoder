@@ -81,3 +81,4 @@ unsigned int WebserviceCommandLogger::getMemUsage() {
 	}
 	return usage;
 }
+

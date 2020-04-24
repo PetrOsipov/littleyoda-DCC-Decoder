@@ -35,3 +35,4 @@ private:
 };
 
 #endif /* WEBSERVICECOMMANDLOGGER_H_ */
+

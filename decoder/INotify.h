@@ -6,7 +6,7 @@
 #include "ILoop.h"
 #include "INamed.h"
 
-/** Benachrichtung über Änderungen + Verwaltung der RequestListen
+/** Benachrichtung Ã¼ber Ã„nderungen + Verwaltung der RequestListen
  * 
  * Author: sven
  */
@@ -42,3 +42,4 @@ protected:
 };
 
 #endif /* INOTIFY_H_ */
+

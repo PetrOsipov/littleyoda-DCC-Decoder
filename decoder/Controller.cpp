@@ -94,7 +94,7 @@ void Controller::registerLoop(ILoop* loop) {
 }
 
 void Controller::notifyTurnout(int id, int direction, int source) {
-	// TODO Wie bei den anderen Notify-Funktion Zustand speichern und nur tatsächliche Änderungen weiterleiten
+	// TODO Wie bei den anderen Notify-Funktion Zustand speichern und nur tatsÃ¤chliche Ã„nderungen weiterleiten
 	// ignore the same command within 50 msec
 	if (lastTurnoutCmd[0] == id && lastTurnoutCmd[1] == direction
 			&& (millis() - lastTurnoutCmd[2]) < 2000) {
@@ -192,7 +192,7 @@ void Controller::notifyGPIOChange(int pin, int newvalue) {
 void Controller::notifyDCCSpeed(int id, int speed, int direction,
 		int SpeedSteps, int source) {
 	if (direction == 0) {
-		Logger::getInstance()->addToLog(LogLevel::ERROR, "Ungültige Richtung (0)");
+		Logger::getInstance()->addToLog(LogLevel::ERROR, "UngÃ¼ltige Richtung (0)");
 	}
 	EMERGENCYActive = speed == Consts::SPEED_EMERGENCY;
 	// Filter out known commands
@@ -331,7 +331,7 @@ void Controller::enableAPModus() {
 	}
 	WiFi.softAP("Hallo World");
 	WiFi.enableAP(true);
-	Logger::log(LogLevel::TRACE, "IP für AP: " + WiFi.softAPIP().toString());
+	Logger::log(LogLevel::TRACE, "IP fÃ¼r AP: " + WiFi.softAPIP().toString());
 	dnsServer.reset(new DNSServer());
 	dnsServer->start(53, "*", WiFi.softAPIP());
 }
@@ -450,3 +450,4 @@ Controller::Items* Controller::getLocData() {
 LinkedList<INotify::requestInfo*>* Controller::getRrequestList() {
 	return &requestList;
 }
+

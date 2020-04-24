@@ -147,7 +147,7 @@ void CmdZentraleZ21::handleGetVersion() {
 }
 
 void CmdZentraleZ21::handleBIB() {
-	// Unvollständig
+	// UnvollstÃ¤ndig
 	int len = pb[4] - 0xe5;
 	int id = ((pb[6] & 0x3F) << 8) + pb[7];
 	Serial.print(String((pb[8]) + 1) + "/" + String(pb[9]) + "Length: " + String(len) + " ID: " + String(id) + " Name :");
@@ -473,4 +473,5 @@ void CmdZentraleZ21::printPacketBuffer(int size) {
 void CmdZentraleZ21::emergencyStop() {
 	controller->emergencyStop(Consts::SOURCE_Z21SERVER);
 }
+
 

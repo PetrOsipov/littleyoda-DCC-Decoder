@@ -38,3 +38,4 @@ void ConnectorTurnout2Value::TurnoutCmd(int id, int direction, int source) {
 	Logger::log(LogLevel::DEBUG, "Turnout2Value. Direction: " + String(direction) + " => Value: " + String(out));
 	send("sd", String(out));
 }
+

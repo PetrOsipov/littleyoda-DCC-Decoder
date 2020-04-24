@@ -159,7 +159,7 @@ void CmdReceiverZ21Wlan::enableBroadcasts() {
 }
 
 /**
- * Sendet einen Gleis besetzt-Signal, der über ein GBM ausgelöst wurde, an die Z21 Loconet
+ * Sendet einen Gleis besetzt-Signal, der Ã¼ber ein GBM ausgelÃ¶st wurde, an die Z21 Loconet
  * 
  * // 5.2 LAN_LOCONET_FROM_LAN
  * 
@@ -204,7 +204,7 @@ void CmdReceiverZ21Wlan::sendSetSensor(uint16_t id, uint8_t status) {
 }
 
 /**
- * Sendet einen Weichenbefehl, der über das Webinterface ausgelöst wurde, an die Z21
+ * Sendet einen Weichenbefehl, der Ã¼ber das Webinterface ausgelÃ¶st wurde, an die Z21
  */
 void CmdReceiverZ21Wlan::sendSetTurnout(String id, String status) {
   //Serial.println("Sending Set Turnout");
@@ -360,3 +360,4 @@ void CmdReceiverZ21Wlan::requestLocoInfo(int addr) {
 	udp->write(packetBuffer, packetBuffer[0]);
 	udp->endPacket();
 }
+

@@ -25,3 +25,4 @@ private:
 };
 
 #endif /* ACTIONSENDTURNOUTCOMMAND_H_ */
+

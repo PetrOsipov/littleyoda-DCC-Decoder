@@ -53,3 +53,4 @@ void WebserviceBase::finishSend() {
 void WebserviceBase::send(const String& content) {
 	server->sendContent(content);
 }
+

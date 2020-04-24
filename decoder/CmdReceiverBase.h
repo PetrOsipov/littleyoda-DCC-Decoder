@@ -23,3 +23,4 @@ protected:
 };
 
 #endif /* CMDRECEIVERBASE_H_ */
+

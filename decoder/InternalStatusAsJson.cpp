@@ -40,3 +40,4 @@ String InternalStatusAsJson::get() {
 void InternalStatusAsJson::print() {
 	serializeJsonPretty(*doc, Serial);
 }
+

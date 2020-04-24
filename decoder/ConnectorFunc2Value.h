@@ -23,3 +23,4 @@ private:
 };
 
 #endif /* CONNECTORFUNC2VALUE_H_ */
+

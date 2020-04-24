@@ -81,3 +81,4 @@ unsigned int WebserviceDCCSniffer::getMemUsage() {
 	}
 	return usage;
 }
+

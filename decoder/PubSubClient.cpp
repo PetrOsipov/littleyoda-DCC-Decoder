@@ -588,3 +588,4 @@ PubSubClient& PubSubClient::setStream(Stream& stream){
 int PubSubClient::state() {
     return this->_state;
 }
+

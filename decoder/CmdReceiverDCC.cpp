@@ -129,3 +129,4 @@ void CmdReceiverDCC::handleDccFun(uint16_t Addr, FN_GROUP FuncGrp,
 	}
 	controller->notifyDCCFun(Addr, startbit, stopbit, value, 0);
 }
+

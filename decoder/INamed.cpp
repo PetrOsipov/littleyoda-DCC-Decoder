@@ -38,3 +38,4 @@ void INamed::setConfigDescription(String desc) {
 String INamed::createDebugDiagramm(String parent) {
 	return "";
 }
+

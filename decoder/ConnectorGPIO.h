@@ -24,3 +24,4 @@ private:
 };
 
 #endif /* CONNECTORGPIO_H_ */
+

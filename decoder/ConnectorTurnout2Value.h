@@ -23,3 +23,4 @@ private:
 };
 
 #endif /* ConnectorTurnout2Value_H_ */
+

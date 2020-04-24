@@ -32,3 +32,4 @@ public:
 };
 
 #endif /* CMDRECEIVERDCC_H_ */
+

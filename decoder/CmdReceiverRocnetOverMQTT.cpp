@@ -153,3 +153,4 @@ String CmdReceiverRocnetOverMQTT::extractString(String payloads, String prefix, 
 String CmdReceiverRocnetOverMQTT::extractXMLAttribute(String payloads, String attrname) {
 	return extractString(payloads, attrname + "=\"", "\"");
 }
+

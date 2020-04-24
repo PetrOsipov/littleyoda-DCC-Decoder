@@ -29,3 +29,4 @@ private:
 };
 
 #endif /* ACTIONTRAKTION_H_ */
+

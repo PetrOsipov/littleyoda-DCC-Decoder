@@ -26,3 +26,4 @@ private:
 };
 
 #endif /* INTERNALSTATUSASJSON_H_ */
+

@@ -22,6 +22,7 @@ ActionSendSensorCommand::ActionSendSensorCommand(Controller* c, int number, Link
   controller = c;
   id = number;
 
+  resend =0;
   r = new requestInfo();
   r->art = requestInfo::ART::SENSOR;
   r->id = number;
@@ -38,7 +39,7 @@ ActionSendSensorCommand::ActionSendSensorCommand(Controller* c, int number, Link
     s.address = number + h;
     s.value = -1;
     gpio.add(s);
-    GPIOobj.pinMode(s.gpio, INPUT, "GPIO for Sensor");
+    GPIOobj.pinMode(s.gpio, INPUT_PULLUP, "GPIO for Sensor");
   }
 }
 
@@ -85,16 +86,29 @@ void ActionSendSensorCommand::setSettings(SensorState status) {
  * Polling of GBM exits. 
  */
 int ActionSendSensorCommand::loop() {
-  
-  
   int listSize = gpio.size();
+  resend++;
+  if (resend>100){
+    for (int h = 0; h < listSize; h++) {
+
+      SensorState sensorstate = gpio.get(h);
+  
+      if (sensorstate.gpio >= 0) {
+         setSettings(sensorstate);    
+      }
+    
+    }
+    resend = 0;
+  }
+  
   for (int h = 0; h < listSize; h++) {
 
     SensorState sensorstate = gpio.get(h);
 
     if (sensorstate.gpio >= 0) {
       int value = GPIOobj.digitalRead(sensorstate.gpio);
-      if (value != sensorstate.value) {
+      
+      if (value != sensorstate.value && value!=0xFF) {
         sensorstate.value = value;
         setSettings(sensorstate);
         gpio.set(h, sensorstate);
@@ -103,4 +117,5 @@ int ActionSendSensorCommand::loop() {
   }
   return 100;
 }
+
 

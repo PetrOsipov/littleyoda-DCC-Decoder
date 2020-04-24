@@ -49,3 +49,4 @@ int DoubleBootDetection::loop() {
 	}
 	return 2001;
 }
+

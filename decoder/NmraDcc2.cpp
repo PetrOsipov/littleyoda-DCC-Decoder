@@ -33,7 +33,7 @@
 //            2015-11-06 Martin Pischky (martin@pischky.de):
 //                       Experimental Version to support 14 speed steps
 //                       and new signature of notifyDccSpeed and notifyDccFunc
-//            2015-12-16 Version without use of Timer0 by Franz-Peter Müller
+//            2015-12-16 Version without use of Timer0 by Franz-Peter MÃ¼ller
 //            2016-07-16 handle glitches on DCC line
 //
 //------------------------------------------------------------------------
@@ -998,3 +998,4 @@ uint8_t NmraDcc::process() {
 	return 0;
 }
 ;
+

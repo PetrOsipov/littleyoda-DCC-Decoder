@@ -223,3 +223,4 @@ bool json::isArray(int id) {
 bool json::isValid() {
 	return valid;
 }
+

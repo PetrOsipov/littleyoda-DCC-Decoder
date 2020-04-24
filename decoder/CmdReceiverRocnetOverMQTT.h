@@ -41,3 +41,4 @@ private:
 void rocnetovermqttcallback(char* topic, byte* payload, unsigned int length);
 
 #endif /* CMDRECEIVERROCNETOVERMQTT_H_ */
+

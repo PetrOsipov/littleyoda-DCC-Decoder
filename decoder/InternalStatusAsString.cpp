@@ -24,3 +24,4 @@ String InternalStatusAsString::get() {
 void InternalStatusAsString::send(String modul, String key, String v) {
 	value = v;
 }
+

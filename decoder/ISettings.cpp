@@ -25,7 +25,7 @@ String ISettings::getHTMLController(String urlprefix) {
 
 
 void ISettings::getHTMLConfig(String urlprefix, Controller* c) {
-	// Abwärtskompatibilität
+	// AbwÃ¤rtskompatibilitÃ¤t
 	String s = getHTMLCfg(urlprefix);
 	if (s != NULL && s != "") {
 		c->sendContent(s);
@@ -38,3 +38,4 @@ String ISettings::createDebugDiagramm(String parent) {
 	out += parent + " -> " + getName() + ";\r\n";
 	return out;
 }
+

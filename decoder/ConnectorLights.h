@@ -30,3 +30,4 @@ private:
 };
 
 #endif /* CONNECTORLIGHTS_H_ */
+

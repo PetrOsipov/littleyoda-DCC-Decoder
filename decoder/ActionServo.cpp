@@ -41,7 +41,7 @@ String ActionServo::getHTMLController(String urlprefix) {
 	message += "<a href=\"#\" onclick=\"";
 	message += "send('" + urlprefix + "&key=so&value=-1')";
 	message += "\">Off";
-	message += "°</a> \r\n";
+	message += "Â°</a> \r\n";
 
 	for (int i = 0; i <= 180; i = i + 10) {
 		String action = "send('" + urlprefix + "&key=so&value=" + i + "')";
@@ -49,7 +49,7 @@ String ActionServo::getHTMLController(String urlprefix) {
 		message += action;
 		message += "\">";
 		message += String(i);
-		message += "°</a> \r\n";
+		message += "Â°</a> \r\n";
 	}
 	message += "</div>";
 	message += "</div>";
@@ -68,3 +68,4 @@ void ActionServo::setSettings(String key, String value) {
 }
 
 //endif
+

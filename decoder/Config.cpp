@@ -82,7 +82,7 @@ bool Config::parse(Controller* controller, Webserver* web, String filename, bool
 	}
 	String version = parser->getValueByKey(0, "version");
 	if (!version.equals("3")) {
-		Logger::getInstance()->addToLog(LogLevel::ERROR, "Ungültige Version des Konfig-Files: " + version);
+		Logger::getInstance()->addToLog(LogLevel::ERROR, "UngÃ¼ltige Version des Konfig-Files: " + version);
 		return false;
 	}
 	if (dryrun) {
@@ -196,7 +196,7 @@ void Config::parseOut(Controller* controller, Webserver* web, String n) {
 					for (int i = 0; i < 127; i++) {
 						arr[i] = 255;
 					}
-					// Array mit den Werten aus der Config-Datei füllen
+					// Array mit den Werten aus der Config-Datei fÃ¼llen
 					arr[0] = 0;
 					arr[1] = 0;
 					arr[127] = 127;
@@ -206,7 +206,7 @@ void Config::parseOut(Controller* controller, Webserver* web, String n) {
 						int pos  = parser->getString(idx).toInt();
 						int pwmvalue  = parser->getString(parser->getNextSiblings(idx)).toInt();
 						if (pos < 1 || pos > 127 || pwmvalue < 0 || pwmvalue > 127) {
-							Logger::getInstance()->addToLog(LogLevel::ERROR,"Ungültiger Wert " + String(pos) + "/" + String(pwmvalue));
+							Logger::getInstance()->addToLog(LogLevel::ERROR,"UngÃ¼ltiger Wert " + String(pos) + "/" + String(pwmvalue));
 							child = parser->getNextSiblings(child);
 							continue;
 						}
@@ -305,7 +305,7 @@ void Config::parseOut(Controller* controller, Webserver* web, String n) {
 								new Pin(parser->getString(parser->getChildAt(child, 3))),
 								persistent
 			);
-			//per·sis·tent
+			//perÂ·sisÂ·tent
 			a->setName(id);
 			a->load();
 			controller->registerSettings(a);
@@ -410,7 +410,7 @@ void Config::parseCfg(Controller* controller, Webserver* web, String n) {
 					gwx.fromString(gw);
 					WiFi.config(ipx, gwx, nmx);
 				} else {
-					Logger::log(LogLevel::ERROR,"Netzwerkkonfiguration (ip, netmask, gw) unvollständig");
+					Logger::log(LogLevel::ERROR,"Netzwerkkonfiguration (ip, netmask, gw) unvollstÃ¤ndig");
 					idx = parser->getNextSiblings(idx);
 					continue;
 				}
@@ -446,6 +446,7 @@ void Config::parseCfg(Controller* controller, Webserver* web, String n) {
 			int sda = GPIOobj.string2gpio(parser->getValueByKey(idx, "sda"));
 			int scl = GPIOobj.string2gpio(parser->getValueByKey(idx, "scl"));
 			Wire.begin(sda, scl);
+      //Wire.setClock(10000);
 
 
 		} else if (m.equals("i2cslave")) {
@@ -462,7 +463,7 @@ void Config::parseCfg(Controller* controller, Webserver* web, String n) {
 				int addridx = parser->getIdxByKey(idx, "addr");
 				addridx = parser->getFirstChild(addridx);
 				if (!parser->isArray(addridx)) {
-					Logger::log(LogLevel::ERROR, "Format für MCP23017/PC9685/ArduinoExtender Adressen falsch!");
+					Logger::log(LogLevel::ERROR, "Format fÃ¼r MCP23017/PC9685/ArduinoExtender Adressen falsch!");
 					idx = parser->getNextSiblings(idx);
 					continue;
 				} 
@@ -478,9 +479,11 @@ void Config::parseCfg(Controller* controller, Webserver* web, String n) {
 						i2caddr = addr + 0x40; // Base + Offset
 					}
       
-					Wire.beginTransmission(i2caddr);
-					int ret = Wire.endTransmission();
+					//Wire.beginTransmission(i2caddr);
+					//int ret = Wire.endTransmission();
+					int ret = 0;
 					String tret = "Failed (" + String(ret) + ")";
+          
 					if (ret == 0) {
 						tret = "OK";
 					}
@@ -501,7 +504,7 @@ void Config::parseCfg(Controller* controller, Webserver* web, String n) {
       
       
 			else {
-				Logger::getInstance()->addToLog(LogLevel::ERROR, "Unbekanntes Gerät (I2C): " + String(d));
+				Logger::getInstance()->addToLog(LogLevel::ERROR, "Unbekanntes GerÃ¤t (I2C): " + String(d));
 			}
 		// } else if (m.equals("lycontroller")) {
 		// 	ActionController* a = new ActionController(controller);
@@ -804,3 +807,4 @@ void Config::parseFilter(Controller* c, Webserver* web, String n) {
 	}
 
 }
+

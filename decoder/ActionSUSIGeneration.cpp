@@ -1,10 +1,10 @@
 /*
  * Spezifikation http://normen.railcommunity.de/RCN-600.pdf
  *
- * Bitte beachten, dass der ESP8266 nur 3.3V verträgt.
+ * Bitte beachten, dass der ESP8266 nur 3.3V vertrÃ¤gt.
  * Das klassische SUSI arbeitet aber mit 5V.
  *
- * Deshalb ist eine Schaltung gemäß Anhang E der Spezifikation notwendig.
+ * Deshalb ist eine Schaltung gemÃ¤ÃŸ Anhang E der Spezifikation notwendig.
  * Die Schaltung ist zumindest in der Spezifikations-Version vom 28.08.2017
  * falsch!
  *
@@ -125,3 +125,4 @@ void ActionSUSIGeneration::send() {
 	SPIBufUsed = 0;
 }
 #endif
+

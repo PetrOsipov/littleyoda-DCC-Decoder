@@ -158,7 +158,7 @@ void Webserver::handleUpload() {
 
 void Webserver::handleFormat() {
 	String output = "" + Utils::getHTMLHeader();
-	output += F("<form action=\"/doformat\" method=\"get\" onsubmit=\"return confirm('Wirklich alles löschen?');\"><button type=\"submit\">Formatieren</button></form>");
+	output += F("<form action=\"/doformat\" method=\"get\" onsubmit=\"return confirm('Wirklich alles lÃ¶schen?');\"><button type=\"submit\">Formatieren</button></form>");
 	output += Utils::getHTMLFooter();
 	server->send(200, "text/html", output);
 }
@@ -428,3 +428,4 @@ void Webserver::handleStatus() {
 		controll->getInternalStatus(server->arg("m"), server->arg("k"))
 	);
 }
+

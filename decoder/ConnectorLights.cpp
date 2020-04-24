@@ -46,3 +46,4 @@ void ConnectorLights::update() {
 	int status = (currentDirection == direction && bit_is_set(currentFStatus, func)) ? 1 : 0;
 	send("status", String(status));
 }
+

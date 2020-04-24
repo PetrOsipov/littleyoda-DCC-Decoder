@@ -18,3 +18,4 @@ IInternalStatusCallback::~IInternalStatusCallback() {
 
 void IInternalStatusCallback::send(String modul, String key, String value) {
 }
+

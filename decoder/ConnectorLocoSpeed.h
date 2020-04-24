@@ -21,3 +21,4 @@ private:
 };
 
 #endif /* CONNECTORLOCOSPEED_H_ */
+

@@ -26,3 +26,4 @@ private:
 };
 
 #endif /* FILTERLIMITCHANGE_H_ */
+

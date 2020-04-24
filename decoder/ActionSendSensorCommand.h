@@ -34,6 +34,8 @@ private:
   int16_t id;
   uint8_t richtung;
   LinkedList<SensorState> gpio;
+  int16_t resend;
 };
 
 #endif /* ACTIONSENDSENSORCOMMAND_H_ */
+

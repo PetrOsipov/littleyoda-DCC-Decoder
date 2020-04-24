@@ -25,3 +25,4 @@ private:
 };
 
 #endif /* DOUBLEBOOTDETECTION_H_ */
+

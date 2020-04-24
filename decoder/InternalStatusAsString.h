@@ -22,3 +22,4 @@ private:
 };
 
 #endif /* INTERNALSTATUSASSTRING_H_ */
+

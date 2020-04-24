@@ -56,7 +56,7 @@ void ActionAudioI2S::play(int idx) {
     filename = "/" + String(idx) + ".wav";
     generator = new AudioGeneratorWAV();
   } else {
-      Serial.println("Audiodatei für " + String(idx) + " nicht gefunden!");
+      Serial.println("Audiodatei fÃ¼r " + String(idx) + " nicht gefunden!");
       return;
   }
   file = new AudioFileSourceSPIFFS(filename.c_str());
@@ -79,7 +79,7 @@ String  ActionAudioI2S::getHTMLController(String urlprefix) {
 		message += action;
 		message += "\">Song ";
 		message += String(i);
-		message += "°</a> \r\n";
+		message += "Â°</a> \r\n";
 	}
 	message += "</div>";
 	message += "</div>";
@@ -88,3 +88,4 @@ String  ActionAudioI2S::getHTMLController(String urlprefix) {
 
 
 #endif
+

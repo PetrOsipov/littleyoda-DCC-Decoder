@@ -1,7 +1,7 @@
 /*
  * ActionPWMOutput.cpp
  * 
- * Basis-Klasse für alle PWM-Klassen
+ * Basis-Klasse fÃ¼r alle PWM-Klassen
  *
  *  Created on: 09.12.2016
  *      Author: sven
@@ -75,3 +75,4 @@ uint8_t ActionPWMOutput::getValue(uint8_t pos) {
 
 void ActionPWMOutput::setFreq(uint32_t value) {
 }
+

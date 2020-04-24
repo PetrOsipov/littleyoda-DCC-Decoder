@@ -26,3 +26,4 @@ protected:
 };
 
 #endif /* IFILTER_H_ */
+

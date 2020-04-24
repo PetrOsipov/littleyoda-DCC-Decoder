@@ -66,3 +66,4 @@ void ActionLed::setPattern(const char* patternString) {
 //		Logger::getInstance()->addToLog("GPIO " + String(patternString[i]) + " " + String(Utils::hextoint(patternString[i])));
 //	}
 }
+

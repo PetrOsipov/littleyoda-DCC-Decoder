@@ -28,3 +28,4 @@ void ConnectorGPIO::GPIOChange(int p, int newValue) {
 	}
 	send("sd", String((newValue == 0) ? lowvalue : highvalue));
 }
+

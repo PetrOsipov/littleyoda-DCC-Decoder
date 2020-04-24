@@ -12,8 +12,8 @@
 
 /** Connector Klasse (Input: INotify Output: Send to ISettings)
  *  
- * Reagiert auf Änderungen (Inotify), 
- * leidet aus den Änderungen Werte ab und übergibt
+ * Reagiert auf Ã„nderungen (Inotify), 
+ * leidet aus den Ã„nderungen Werte ab und Ã¼bergibt
  * die Werte an die ISettings-Klassen
  * 
  */
@@ -34,3 +34,4 @@ protected:
 
 
 #endif /* CONNECTORS_H_ */
+

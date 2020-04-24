@@ -231,3 +231,4 @@ void z21PaketParser::handleFirmware(unsigned char packetBuffer[]) {
 	}
 }
 
+

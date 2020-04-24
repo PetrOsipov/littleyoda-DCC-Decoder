@@ -55,3 +55,4 @@ private:
 };
 
 #endif /* CMDRECEIVERZ21WLAN_H_ */
+

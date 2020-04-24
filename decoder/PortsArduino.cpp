@@ -9,8 +9,8 @@
 #include "Logger.h"
 
 PortsArduino::PortsArduino(uint8_t addr, LinkedList<pinInfo*>* pi, int idx, String variant) : Ports(pi, idx) {
-  extender = new ArduinoPortExtender(0x22,0xc0);
-  
+  extender = new ArduinoPortExtender(addr,0xc0);
+  Logger::getInstance()->addToLog(LogLevel::INFO, "Adding Arduino PortExtender for address : " + String(addr));
 
   offset = idx;
   //TODO: Add MEGA, NodeMCU, Bluepill...
@@ -74,21 +74,27 @@ int PortsArduino::digitalRead(uint16_t pin) {
 void PortsArduino::digitalWrite(uint16_t pin, uint8_t val) {
   pin = pin-(offset * 100);
   uint8_t result = extender->digitalWrite(pin, val);
-
+  Serial.print("DigitalWrite return code ");
+  Serial.println(result);
 }
 
 
 void PortsArduino::analogWrite(uint16_t pin, int val) {
   pin = pin-(offset * 100);
-  extender->analogWrite(pin, val);
+  uint8_t result = extender->analogWrite(pin, val);
+  Serial.print("analogWrite return code ");
+  Serial.println(result);
 }
 
 void PortsArduino::servoWrite(uint16_t pin, uint8_t val) {
   pin = pin-(offset * 100);
-  extender->servoWrite(pin, val);
+  uint8_t result = extender->servoWrite(pin, val);
+  Serial.print("servoWrite return code ");
+  Serial.println(result);
 }
 
 void PortsArduino::cache(bool c) {
 
 }
   
+

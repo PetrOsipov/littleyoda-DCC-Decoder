@@ -46,3 +46,4 @@ void ConnectorFunc2Value::DCCFunc(int id, unsigned long int newvalue, int source
 	Logger::log(LogLevel::TRACE, "Func2Value Value " + String(out));
 	send("sd", String(out));
 }
+

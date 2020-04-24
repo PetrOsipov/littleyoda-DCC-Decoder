@@ -64,3 +64,4 @@ String WebserviceWifiScanner::getLinkText() {
 	return "&#x1F4F6;";
 }
 
+

@@ -8,6 +8,7 @@
 #include "ConnectorONOFF.h"
 
 ConnectorONOFF::ConnectorONOFF(ISettings* a, int locoaddr, int f) {
+  Serial.println("Connector on off - create ");
 	addAction(a);
 	addr = locoaddr;
 	funcbit = f;
@@ -24,8 +25,10 @@ ConnectorONOFF::~ConnectorONOFF() {
 }
 
 void ConnectorONOFF::DCCFunc(int id, int bit, int newvalue, int source) {
+  Serial.println("Connector on off - dcc data ");
 	if (id == this->addr && bit == this->funcbit) {
 		send("onoff", String(newvalue));
 	}
 }
+
 
